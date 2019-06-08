@@ -88,6 +88,11 @@ class Browse extends Component{
       </div>
       */
      <div>
+       <br/>
+       <br/>
+       <br/>
+       <br/>
+       <br/>
         <div className="browse-container">
           <div className="buttons">
             <div className="view-button" id="grid" onClick={this.handleClick}>Grid</div>

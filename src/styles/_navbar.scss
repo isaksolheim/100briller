@@ -16,85 +16,57 @@
   }
 }
 
-
 .navbar-container {
-  position: absolute;
   width: 100%;
+  height: 55px;
+  background-color: #f3f3f3;
+  text-align: center;
 
-  .navbar {
-    overflow: hidden;
-    background-color: #fff;
-    margin-bottom: 6vh;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .2); 
-    text-align: center;
-
-    .nav-item {
-      display: inline-block;
-      color: black;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-      cursor: pointer;
-
-      @include desktop {
-        font-size: 25px;
-      }
-    }
-
-    .nav-item:hover {
-      background-color: color(primary-light);
-      color: black;
-    }
-
+  .navbar {  
     .nav-button {
-      display: none;
-      cursor: pointer;
+      position: absolute;
+      left: 10px;
+      top: 10px;
     }
 
-    @media screen and (max-width: 600px) {
-      .nav-item {
-        display: none;
-      }
-      .nav-button {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-      }
+    .nav-items {
+      display: none;
+    }
+
+    .nav-logo {
+      font-size: 25px;
+      padding-top: 10px;      
+    }
+
+    .nav-cart {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+    }
+
+    .nav-cart-items {
+      position: absolute;
+      color: white;
+      top: 5px;
+      right: 10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: green;
+      text-align: center;
     }
   }
 
-  @media screen and (max-width: 600px) {
-    .navbar.responsive {
+  .navbar.responsive {
+    .nav-items {
+      display: block;
       animation: 0.2s ease-out 0s 1 slideInFromLeft;
       position: fixed;
       width: 60%;
       height: 100vh;
-      background-color: rgba(255,255,255,0.9);
-
-      .nav-logo {
-        display: none;
-        float: none;
-      }
-      .nav-items {
-        animation: 0.2s ease-in-out 0s 1 slideInFromLeft;
-        margin-top: 100px;
-      }
-
-      .nav-item {
-        float: none;
-        display: block;
-        text-align: center;
-        font-size: 30px;
-        margin-top: 20px;
-        cursor: pointer;
-      }
-
-      .nav-button {
-        position: relative;
-        float: right;
-      }
+      background-color: rgba(255, 255, 255, 0.9);
     }
   }
 }
+
+
