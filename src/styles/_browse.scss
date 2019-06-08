@@ -1,0 +1,65 @@
+.browse-container {
+  color: black;
+
+  .buttons {
+    margin: 0 auto;
+    .view-button {
+      display: inline-block;
+      width: 40px;
+      height: 10px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+    }
+  }
+
+  .grid-view {
+    padding: 10px;
+    .product {
+      cursor: pointer;
+      display: inline-block;
+      width: 38%;
+      text-align: center;
+      margin: 20px;
+      .name {
+        font-size: 20px;
+      }
+
+      .price {
+        font-size: 15px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .list-view {
+    padding: 10px;
+    .product {
+      margin-bottom: 20px;
+
+      cursor: pointer;
+      height: 100px;
+      
+      img {
+        width: 40%;
+        float: left;
+      }
+    }
+  }
+
+  .single-view {
+    margin: 20px;
+    .product {
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 20px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
