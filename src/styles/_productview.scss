@@ -1,0 +1,32 @@
+.product-container {
+  width: 100%;
+  text-align: center;
+  img {
+    width: 100%;
+  }
+
+  .info {
+    margin: 40px;
+    .title {
+      font-size: 25px;
+    }
+
+    .desc {
+      text-align: left;
+      font-size: 15px;
+    }
+
+    .price {
+      font-size: 20px;
+    }
+
+    .add-button {
+      width: 100px;
+      height: 25px;
+      background-color: green;
+      margin: 0 auto;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  }
+}

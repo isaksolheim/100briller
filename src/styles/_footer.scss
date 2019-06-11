@@ -1,0 +1,38 @@
+.footer-container {
+  background-color: #f1f1f1;
+  text-align: center;
+
+  .newsletter {
+    .title {
+      font-size: 20px;
+    }
+    p {
+      font-size: 15px;
+    }
+    input[type=email] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    input[type=submit] {
+      background-color: green;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      width: 100%;
+      cursor: pointer;
+      transition: 0.2s all;
+    }
+
+    input[type=submit]:hover {
+      background-color: aqua;
+    }
+  }
+}
