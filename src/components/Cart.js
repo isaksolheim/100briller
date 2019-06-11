@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import { removeItem,addQuantity,subtractQuantity} from '../actions/cartActions';
 import Recipe from './Recipe';
 class Cart extends Component {
@@ -22,6 +22,15 @@ class Cart extends Component {
       addedItems = (
         this.props.items.map(item=>{
           return(
+            <div className="added-item">
+              <img src={item.img} alt="vare" />
+              <div className="title">{item.title}</div>
+              <div className="price">{item.price} NOK</div>
+            <br />
+            <br />
+            </div>
+
+/*
             <li className="collection-item avatar" key={item.id}>
               <div className="item-img"> 
                 <img src={item.img} alt={item.img} className=""/>
@@ -40,6 +49,7 @@ class Cart extends Component {
                 <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item.id)}}>Remove</button>
               </div>
             </li>
+*/
           )
         })
       );
@@ -48,13 +58,10 @@ class Cart extends Component {
     }
 
     return(
-      <div className="container">
-        <div className="cart">
-          <h5>You have ordered:</h5>
-          <ul className="collection">
-            {addedItems}
-          </ul>
-        </div> 
+      <div className="cart-container">
+        <h1>1. Dine varer</h1>
+        {addedItems}
+        <h1>2. frakt</h1>
         <Recipe />          
       </div>
     );

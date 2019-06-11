@@ -1,13 +1,20 @@
 .footer-container {
+  margin-bottom: 20px;
+  hr {
+    width: 80%;
+  }
   background-color: #f1f1f1;
   text-align: center;
 
   .newsletter {
+    margin-left: 40px;
+    margin-right: 40px;
+
     .title {
-      font-size: 20px;
+      font-size: 15px;
     }
     p {
-      font-size: 15px;
+      font-size: 13px;
     }
     input[type=email] {
         width: 100%;
@@ -33,6 +40,14 @@
 
     input[type=submit]:hover {
       background-color: aqua;
+    }
+  }
+
+  .socials {
+    .icon {
+      margin: 10px;
+      font-size: 30px;
+      cursor: pointer;
     }
   }
 }

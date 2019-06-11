@@ -12,7 +12,19 @@ function Footer() {
           <input type="submit" value="Send" />
         </form>
       </div>
-      Footer, created by isaks.io
+
+      <hr />
+
+      <div className="socials">
+        Følg oss
+        <br />
+        <i className="icon fab fa-instagram"></i>
+        <i className="icon fab fa-facebook-f"></i>
+        <i className="icon fab fa-twitter"></i>
+      </div>
+
+      <hr />
+      Created by <a href="https://www.isaks.io">isaks.io</a>
     </div>
   );
 }
