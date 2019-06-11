@@ -1,0 +1,17 @@
+.home-container {
+  text-align: center;
+  padding: 20px;
+
+  .browse-button {
+    margin: 0 auto;
+    text-decoration: none;
+    background-color: green;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 100px;
+    cursor: pointer;
+    transition: 0.2s all;
+  }
+}

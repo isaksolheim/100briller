@@ -55,11 +55,8 @@ class Browse extends Component{
     return(
       <div>
        <br/>
-       <br/>
-       <br/>
-       <br/>
-       <br/>
         <div className="browse-container">
+          <h1>Produkter</h1>
           <div className="buttons">
             View: 
             <div className="view-button" onClick={this.handleClick}><i id="grid" className="fas fa-th-large"></i></div>

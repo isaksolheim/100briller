@@ -36,14 +36,14 @@
   }
 
   .list-view {
+    display: flex;
+    flex-direction: column;
     .product {
       text-decoration: none;
       color: black;
       margin-bottom: 20px;
-
       cursor: pointer;
       height: 100px;
-      
       img {
         width: 40%;
         float: left;

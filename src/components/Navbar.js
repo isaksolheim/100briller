@@ -39,8 +39,8 @@ class Navbar extends React.Component {
             <Link to="/">
                 <div className="nav-item" onClick={this.slideout}>Hjem</div>
             </Link>
-            <Link to="/kategorier"> 
-                <div className="nav-item" onClick={this.slideout}>Kategorier</div>
+            <Link to="/produkter"> 
+                <div className="nav-item" onClick={this.slideout}>Produkter</div>
             </Link>
             
             <Link to="/om-oss"> 

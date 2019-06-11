@@ -1,8 +1,20 @@
 .cart-container {
+  display: flex;
+  flex-direction: column;
   .added-item {
+    background-color: #f1f1f1;
+    width: 100%;
     img {
       width: 40%;
       float: left;
+    }
+
+    i {
+      margin: 5px;
+    }
+    .amount-buttons {
+      font-size: 20px;
+      cursor: pointer;
     }
   }
 }
