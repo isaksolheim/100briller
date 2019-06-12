@@ -2,24 +2,32 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 //import { addShipping } from './actions/cartActions'
 class Recipe extends Component{
-    
   componentWillUnmount() {
-    if(this.refs.shipping.checked)
+    if(this.refs.shipping.checked) {
       this.props.substractShipping()
+    }
   }
 
   handleChecked = (e)=>{
-      if(e.target.checked){
-          this.props.addShipping();
+      if(e.target.checked) {
+        this.props.addShipping();
       }
-      else{
-          this.props.substractShipping();
+      else {
+        this.props.substractShipping();
       }
   }
 
   render(){
 
     return(
+      <div className="shipping-container">
+        <label className="shipping">Frakt med Bring
+          <input type="checkbox" ref="shipping" onChange={this.handleChecked} />
+          <span className="checkmark"></span>
+        </label>
+        <h3>Total: {this.props.total} NOK</h3>
+      </div>
+      /*
       <div className="container">
         <div className="collection">
           <li className="collection-item">
@@ -34,21 +42,22 @@ class Recipe extends Component{
           <button className="waves-effect waves-light btn">Checkout</button>
         </div>
       </div>
+      */
     )
   }
 }
 
 const mapStateToProps = (state)=>{
-  return{
+  return {
     addedItems: state.addedItems,
     total: state.total
   }
 }
 
-const mapDispatchToProps = (dispatch)=>{
-  return{
-    addShipping: ()=>{dispatch({type: 'ADD_SHIPPING'})},
-    substractShipping: ()=>{dispatch({type: 'SUB_SHIPPING'})}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addShipping: () => { dispatch({type: 'ADD_SHIPPING'}) },
+    substractShipping: () => { dispatch({type: 'SUB_SHIPPING'}) }
   }
 }
 

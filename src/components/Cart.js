@@ -47,7 +47,7 @@ class Cart extends Component {
       <div className="cart-container">
         <h1>1. Dine varer</h1>
         {addedItems}
-        <h1>2. frakt</h1>
+        <h1>2. Frakt</h1>
         <Recipe />          
       </div>
     );
