@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { removeItem,addQuantity,subtractQuantity} from '../actions/cartActions';
+import { PayPalButton } from "react-paypal-button-v2";
 import Recipe from './Recipe';
 
 class Cart extends Component {
@@ -50,6 +51,20 @@ class Cart extends Component {
         {addedItems}
         <h1>2. Frakt</h1>
         <Recipe />
+        <PayPalButton
+        amount="0.01"
+        onSuccess={(details, data) => {
+          alert("Transaction completed by " + details.payer.name.given_name);
+ 
+          // OPTIONAL: Call your server to save the transaction
+          return fetch("/paypal-transaction-complete", {
+            method: "post",
+            body: JSON.stringify({
+              orderID: data.orderID
+            })
+          });
+        }}
+      />
       </div>
     );
   }

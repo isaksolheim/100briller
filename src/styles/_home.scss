@@ -1,12 +1,32 @@
 .home-container {
   text-align: center;
 
-  .home-text {
-    padding: 20px;
-  }
-  
-  img {
-    width: 100%;
+  .image-container {
+    z-index: -1;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    color: white;
+
+    img {
+      width: 100%;
+      filter: brightness(40%);
+    }
+
+    .home-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .title {
+        font-size: 25px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
   }
 
   a {

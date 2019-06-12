@@ -21,7 +21,7 @@
 
   .shipping-container {
      /* Customize the label (the container) */
-     z-index: -1;
+     z-index: 0;
     .shipping {
       display: block;
       position: relative;
@@ -63,7 +63,7 @@
 
     /* When the checkbox is checked, add a blue background */
     .shipping input:checked ~ .checkmark {
-      background-color: #2196F3;
+      background-color: color(primary);
     }
 
     /* Create the checkmark/indicator (hidden when not checked) */

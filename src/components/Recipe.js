@@ -21,7 +21,7 @@ class Recipe extends Component{
 
     return(
       <div className="shipping-container">
-        <label className="shipping">Frakt med Bring
+        <label className="shipping">Legg til sporing (+50 NOK)
           <input type="checkbox" ref="shipping" onChange={this.handleChecked} />
           <span className="checkmark"></span>
         </label>
