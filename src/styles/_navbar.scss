@@ -25,6 +25,7 @@
 
   .navbar {  
     .nav-button {
+      -webkit-appearance: none;
       cursor: pointer;
       z-index: 1;
       position: absolute;
