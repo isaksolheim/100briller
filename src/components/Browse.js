@@ -54,7 +54,6 @@ class Browse extends Component{
 
     return(
       <div>
-       <br/>
         <div className="browse-container">
           <h1>Produkter</h1>
           <div className="buttons">

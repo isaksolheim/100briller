@@ -3,7 +3,7 @@
   hr {
     width: 80%;
   }
-  background-color: #f1f1f1;
+  background-color: color(accent);
   text-align: center;
 
   .newsletter {
@@ -28,7 +28,7 @@
     }
 
     input[type=submit] {
-      background-color: green;
+      background-color: color(primary);
       color: white;
       padding: 12px 20px;
       border: none;
@@ -39,7 +39,7 @@
     }
 
     input[type=submit]:hover {
-      background-color: aqua;
+      background-color: color(primary-dark);
     }
   }
 

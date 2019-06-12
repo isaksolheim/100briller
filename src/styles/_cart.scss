@@ -20,8 +20,8 @@
   }
 
   .shipping-container {
-
      /* Customize the label (the container) */
+     z-index: -1;
     .shipping {
       display: block;
       position: relative;

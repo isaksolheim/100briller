@@ -52,8 +52,11 @@
   }
 
   .single-view {
-    .product {
+    a {
       text-decoration: none;
+    }
+
+    .product {
       color: black;
       text-align: center;
       cursor: pointer;

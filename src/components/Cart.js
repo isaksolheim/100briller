@@ -12,10 +12,12 @@ class Cart extends Component {
   //to add the quantity
   handleAddQuantity = (id) => {
     this.props.addQuantity(id);
+    this.forceUpdate();
   }
   //to substruct from the quantity
   handleSubtractQuantity = (id) => {
     this.props.subtractQuantity(id);
+    this.forceUpdate();
   }
   render(){
     let addedItems;
@@ -29,12 +31,11 @@ class Cart extends Component {
               </Link>
               <div className="title">{item.title}</div>
               <div className="price">{item.price} NOK</div>
+              <div className="amount">Antall: {item.quantity}</div>
               <div className="amount-buttons">
-                <i className="fas fa-minus" onClick={()=>{this.handleSubtractQuantity(item.id)}}></i>
-                <i className="fas fa-plus" onClick={()=>{this.handleAddQuantity(item.id)}}></i>
+                <i className="fas fa-minus" onClick={() => {this.handleSubtractQuantity(item.id)}}></i>
+                <i className="fas fa-plus" onClick={() => {this.handleAddQuantity(item.id)}}></i>
               </div>
-            <br />
-            <br />
             </div>
           )
         })
@@ -48,7 +49,7 @@ class Cart extends Component {
         <h1>1. Dine varer</h1>
         {addedItems}
         <h1>2. Frakt</h1>
-        <Recipe />          
+        <Recipe />
       </div>
     );
   }
