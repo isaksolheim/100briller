@@ -51,20 +51,22 @@ class Cart extends Component {
         {addedItems}
         <h1>2. Frakt</h1>
         <Recipe />
-        <PayPalButton
-        amount="0.01"
-        onSuccess={(details, data) => {
-          alert("Transaction completed by " + details.payer.name.given_name);
- 
-          // OPTIONAL: Call your server to save the transaction
-          return fetch("/paypal-transaction-complete", {
-            method: "post",
-            body: JSON.stringify({
-              orderID: data.orderID
-            })
-          });
-        }}
-      />
+        <div className="paypal">
+          <PayPalButton
+          amount="0.01"
+          onSuccess={(details, data) => {
+            alert("Transaction completed by " + details.payer.name.given_name);
+  
+            // OPTIONAL: Call your server to save the transaction
+            return fetch("/paypal-transaction-complete", {
+              method: "post",
+              body: JSON.stringify({
+                orderID: data.orderID
+              })
+            });
+          }}
+          />
+      </div>
       </div>
     );
   }

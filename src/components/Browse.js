@@ -21,7 +21,7 @@ class Browse extends Component{
 
   render(){
     const product = (
-      <div>
+      <div className="products">
         {this.props.items.map(product => (
           <Link to={`/produkter/${product.id}`} key={product.id}>
             <div className="product">
@@ -55,12 +55,14 @@ class Browse extends Component{
     return(
       <div>
         <div className="browse-container">
-          <h1>Produkter</h1>
-          <div className="buttons">
-            View: 
-            <div className="view-button" onClick={this.handleClick}><i id="grid" className="fas fa-th-large"></i></div>
-            <div className="view-button" onClick={this.handleClick}><i id="list" className="fas fa-list"></i></div>
-            <div className="view-button" onClick={this.handleClick}><i id="single" className="fas fa-square"></i></div>
+          <div className="controls">
+            <h1>Produkter</h1>
+            <div className="buttons">
+              View: 
+              <div className="view-button" onClick={this.handleClick}><i id="grid" className="fas fa-th-large"></i></div>
+              <div className="view-button" onClick={this.handleClick}><i id="list" className="fas fa-list"></i></div>
+              <div className="view-button" onClick={this.handleClick}><i id="single" className="fas fa-square"></i></div>
+            </div>
           </div>
           <hr />
           {(this.state.view === 'grid') ? gridView : (this.state.view === 'list' ? listView : singleView)}

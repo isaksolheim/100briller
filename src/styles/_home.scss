@@ -49,4 +49,19 @@
   .browse-button:hover {
     background-color: color(primary-dark);
   }
+
+  @include desktop {
+    .image-container {
+      z-index: 0;
+      max-height: 500px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .browse-button {
+      padding: 20px 20px;
+      width: 400px;
+      font-size: 30px;
+    }
+  }
 }

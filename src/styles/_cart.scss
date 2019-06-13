@@ -12,10 +12,10 @@
 
     i {
       margin: 5px;
+      cursor: pointer;
     }
     .amount-buttons {
       font-size: 20px;
-      cursor: pointer;
     }
   }
 
@@ -90,5 +90,27 @@
       -ms-transform: rotate(45deg);
       transform: rotate(45deg);
     } 
+  }
+}
+
+@include desktop {
+  .cart-container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    .added-item {
+      background-color: color(accent);
+      width: 100%;
+      max-height: 200px;
+      img {
+        width: 20%;
+      }
+    }
+    .paypal {
+      margin: 0 auto;
+      width: 300px;
+    }
   }
 }

@@ -3,7 +3,7 @@ $colors: (
   primary-light: lighten(#5C80BC, 40%),
   primary-dark: darken(#5C80BC, 40%),
   secondary: #4D5061,
-  accent: #f1f1f1,
+  accent: #f8f8f8,
 );
 
 @function color($color-name) {
@@ -23,7 +23,10 @@ html, body {
 
 .container {
   font-family: 'Karla', sans-serif;
+  position: relative;
+  min-height: 100vh;
 }
+
 
 @import './navbar';
 @import './browse';
@@ -31,3 +34,4 @@ html, body {
 @import './footer';
 @import './cart';
 @import './home';
+@import './about';
