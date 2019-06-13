@@ -16,6 +16,11 @@ class Navbar extends React.Component {
     } else {
       button.innerHTML = '<i class="fa fa-bars fa-2x"></i>';
     }
+
+    // just removes responsive class if we are viewing on desktop
+    if (document.documentElement.clientWidth > 839) {
+      navbar.className = 'navbar';
+    }
   }
 
   getCartItems = () => {
@@ -32,6 +37,7 @@ class Navbar extends React.Component {
     return(
       <div className="navbar-container" id="home">
         <div className="navbar" id="navbar">
+          <div className="nav-logo">100briller</div>
           <button onClick={this.slideout} className="nav-button" id="nav-button">
             <i className="fa fa-bars fa-2x"/>
           </button>
@@ -47,7 +53,6 @@ class Navbar extends React.Component {
                 <div className="nav-item" onClick={this.slideout}><i className="fas fa-question"></i>Om oss</div>
             </Link>
           </div>
-          <div className="nav-logo">100briller</div>
           <Link to="/cart">
             <div className="nav-cart"><i className="fas fa-shopping-cart fa-2x" /></div>
             <div className="nav-cart-items">{itemsInCart}</div>
