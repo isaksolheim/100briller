@@ -21,51 +21,27 @@ class Browse extends Component{
 
   render(){
     const product = (
-      <div className="products">
+      <div className="row">
         {this.props.items.map(product => (
-          <Link to={`/produkter/${product.id}`} key={product.id}>
-            <div className="product">
-              <img src={product.img} alt="briller" />
-              <div className="title">{product.title}</div>
-              <div className="price">{product.price} NOK</div>
+          <div className="col-md-4" key={product.id}>
+            <div className="card mb-4 box-shadow">
+              <img className="card-img-top" src={product.img} alt="produkt" />
+              <div className="card-body">
+                <p className="card-text">{product.title}</p>
+                <div className="d-flex justify-content-between align-items-center">
+                  <small className="text-muted">{product.price} NOK</small>
+                  <Link to={`/produkter/${product.id}`} key={product.id} className="btn btn-primary">Kjøp</Link>
+                </div>
+              </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     );
-
-    const gridView = (
-      <div className="grid-view">
-        {product}
-      </div>
-    );
-
-    const listView = (
-      <div className="list-view">
-        {product}
-      </div>
-    );
-
-    const singleView = (
-      <div className="single-view">
-        {product}
-      </div>
-    );
-
     return(
-      <div>
-        <div className="browse-container">
-          <div className="controls">
-            <h1>Produkter</h1>
-            <div className="buttons">
-              View: 
-              <div className="view-button" onClick={this.handleClick}><i id="grid" className="fas fa-th-large"></i></div>
-              <div className="view-button" onClick={this.handleClick}><i id="list" className="fas fa-list"></i></div>
-              <div className="view-button" onClick={this.handleClick}><i id="single" className="fas fa-square"></i></div>
-            </div>
-          </div>
-          <hr />
-          {(this.state.view === 'grid') ? gridView : (this.state.view === 'list' ? listView : singleView)}
+      <div className="album py-5 bg-light">
+        <div className="container">
+          {product}
         </div>
       </div>
     );

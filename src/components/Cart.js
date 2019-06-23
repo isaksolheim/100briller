@@ -46,6 +46,11 @@ class Cart extends Component {
     }
 
     return(
+      <div className="container">
+        cart
+      </div>
+      
+      /*
       <div className="cart-container">
         <h1>1. Dine varer</h1>
         {addedItems}
@@ -68,6 +73,7 @@ class Cart extends Component {
           />
       </div>
       </div>
+      */
     );
   }
 }

@@ -28,6 +28,20 @@ class ProductView extends React.Component {
 
     // what will be rendered:
     return(
+      <div class="container">
+        <hr class="featurette-divider" />
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">{product.title} </h2>
+            <p class="lead">{product.price} NOK</p>
+              <div className="btn btn-primary" onClick={()=>{this.handleAddClick(product.id)}} style={{cursor: 'pointer'}}>Legg til handlekurv</div>
+            </div>
+            <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src={product.img} alt="product" />
+          </div>
+        </div>
+      </div>
+      /*
       <div className="product-container">
         <img src={product.img} alt="briller" />
         <div className="info">
@@ -37,6 +51,7 @@ class ProductView extends React.Component {
           <div className="desc">{product.desc}</div>
         </div>
       </div>
+      */
     );
   }
 
