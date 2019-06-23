@@ -16,6 +16,10 @@ $colors: (
   }
 }
 
+.table>tbody>tr>td, .table>tfoot>tr>td{
+    vertical-align: middle;
+}
+
 /*
 html, body {
   height: 100%;

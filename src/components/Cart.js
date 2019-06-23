@@ -26,6 +26,28 @@ class Cart extends Component {
       addedItems = (
         this.props.items.map(item=>{
           return(
+            <tbody key={item.id}>
+						<tr>
+							<td data-th="Product">
+								<div class="row">
+									<div class="col-sm-2 hidden-xs"><img src={item.img} width='85px' alt="produkt" class="img-responsive"/></div>
+									<div class="col-sm-10">
+										<h4 class="nomargin">{item.title}</h4>
+									</div>
+								</div>
+							</td>
+							<td data-th="Price">{item.price} NOK</td>
+							<td data-th="Quantity">
+								<input type="number" class="form-control text-center" value={item.quantity} />
+							</td>
+							<td data-th="Subtotal" class="text-center">{item.price * item.quantity} NOK</td>
+							<td class="actions" data-th="">
+								<button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+								<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
+							</td>
+						</tr>
+					</tbody>
+            /*
             <div className="added-item" key={item.id}>
               <Link to={`/produkter/${item.id}`}>
                 <img src={item.img} alt="vare" />
@@ -38,6 +60,7 @@ class Cart extends Component {
                 <i className="fas fa-plus" onClick={() => {this.handleAddQuantity(item.id)}}></i>
               </div>
             </div>
+            */
           )
         })
       );
@@ -47,7 +70,29 @@ class Cart extends Component {
 
     return(
       <div className="container">
-        cart
+        <table className="table table-hover table-condensed" id="cart">
+          <thead>
+						<tr>
+							<th style={{width: '50%'}}>Product</th>
+							<th style={{width: '10%'}}>Price</th>
+							<th style={{width: '8%'}}>Quantity</th>
+							<th style={{width: '22%'}} class="text-center">Subtotal</th>
+							<th style={{width: '10%'}}></th>
+						</tr>
+					</thead>
+          {addedItems}
+          <tfoot>
+						<tr class="visible-xs">
+							<td class="text-center"><strong>Total 1.99</strong></td>
+						</tr>
+						<tr>
+							<td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+							<td colspan="2" class="hidden-xs"></td>
+							<td class="hidden-xs text-center"><strong>Total $1.99</strong></td>
+							<td><a href="#" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+						</tr>
+					</tfoot>
+        </table>
       </div>
       
       /*
