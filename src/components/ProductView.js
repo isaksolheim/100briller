@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addToCart } from '../actions/cartActions';
+import { Link } from 'react-router-dom';
 
 class ProductView extends React.Component {
   constructor(props) {
@@ -10,7 +11,21 @@ class ProductView extends React.Component {
   }
 
   handleAddClick = (id) => {
+    // add item to cart
     this.props.addToCart(id); 
+
+    // create new button that takes you to cart
+    document.getElementById('button').style.display = 'none';
+    var link = document.getElementById('link');
+    var button = document.createElement('div');
+    button.innerHTML = "Til Handlekurv";
+    button.className = "btn btn-warning";
+    link.appendChild(button);
+    document.getElementById('wrapper').appendChild(link);
+  }
+
+  redirect =  () => {
+    console.log('yee');
   }
 
   productInfo = () => {
@@ -28,38 +43,34 @@ class ProductView extends React.Component {
 
     // what will be rendered:
     return(
-      <div class="container">
-        <hr class="featurette-divider" />
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">{product.title} </h2>
-            <p class="lead">{product.price} NOK</p>
-              <div className="btn btn-primary" onClick={()=>{this.handleAddClick(product.id)}} style={{cursor: 'pointer'}}>Legg til handlekurv</div>
+      <div className="container">
+        <hr className="featurette-divider" />
+        <div className="row featurette">
+          <div id="wrapper" className="col-md-7 order-md-2">
+            <h2 className="featurette-heading">{product.title}</h2>
+            <p className="lead">{product.price}NOK</p>
+              <div
+                id="button" 
+                className="btn btn-primary" 
+                onClick={()=>{this.handleAddClick(product.id)}} 
+                style={{cursor: 'pointer', transition: '0.3s all'}}>
+                  Legg til handlekurv
+              </div>
+              <Link to="/cart" id="link"></Link>
             </div>
-            <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src={product.img} alt="product" />
+            <div className="col-md-5">
+            <img className="featurette-image img-fluid mx-auto" src={product.img} alt="product" />
           </div>
         </div>
       </div>
-      /*
-      <div className="product-container">
-        <img src={product.img} alt="briller" />
-        <div className="info">
-          <div className="title">{product.title}</div>
-          <div className="price">{product.price} NOK</div>
-          <div className="add-button" onClick={()=>{this.handleAddClick(product.id)}}>Legg til</div>
-          <div className="desc">{product.desc}</div>
-        </div>
-      </div>
-      */
     );
   }
 
   render() {
-    const yee = this.productInfo();
+    const view = this.productInfo();
     return(
       <div>
-        {yee}
+        {view}
       </div>
     );
   }

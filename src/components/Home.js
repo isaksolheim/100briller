@@ -18,22 +18,27 @@ function Home() {
         <hr className="featurette-divider" />
         <div className="row featurette">
           <div className="col-md-7">
-            <h2 className="featurette-heading">First featurette heading. <span className="text-muted">It'll blow your mind.</span></h2>
-            <p className="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 className="featurette-heading">Elegante <span className="text-muted">raske briller</span></h2>
+            <p className="lead">
+              Man kan gjøre mye med noen raske briller. Ski, sykkel og løping er bare noen eksempler. Med høy
+              kvalitet og kjente merker kan vi forsikre deg om at du blir førnøyd!
+            </p>
           </div>
           <div className="col-md-5">
             <img className="featurette-image img-fluid mx-auto" src={'./images/item1.jpg'} alt="briller" />
           </div>
         </div>
-        <hr class="featurette-divider" />
+        <hr className="featurette-divider" />
 
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <div className="row featurette">
+          <div className="col-md-7 order-md-2">
+            <h2 className="featurette-heading">Start sommeren riktig. <span className="text-muted">Prøv noen raske briller.</span></h2>
+            <p className="lead">
+              Med 14 dagers åpent kjøp kan du få byttet brillene hvis du ikke er fornøyd, helt uten ekstra kostnader.
+              Alle brille er EU-godkjent og kommer med UV400-beskyttelse, perfekt for varme og solfyllte sommerdager</p>
           </div>
-          <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src={'./images/item6.jpg'} alt="briller" />
+          <div className="col-md-5 order-md-1">
+            <img className="featurette-image img-fluid mx-auto" src={'./images/item6.jpg'} alt="briller" />
           </div>
         </div>
       </div>
