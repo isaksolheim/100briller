@@ -65,9 +65,9 @@ class Cart extends Component {
         <table className="table table-hover table-condensed" id="cart">
           <thead>
 						<tr>
-							<th style={{width: '50%'}}>Product</th>
-							<th style={{width: '10%'}}>Price</th>
-							<th style={{width: '8%'}}>Quantity</th>
+							<th style={{width: '50%'}}>Produkt</th>
+							<th style={{width: '10%'}}>Pris</th>
+							<th style={{width: '8%'}}>Antall</th>
 							<th style={{width: '22%'}} className="text-center">Subtotal</th>
 							<th style={{width: '10%'}}></th>
 						</tr>
@@ -75,10 +75,10 @@ class Cart extends Component {
           {addedItems}
           <tfoot>
 						<tr>
-							<td><Link to="/produkter" className="btn btn-warning"><i className="fa fa-angle-left"></i> Continue Shopping</Link></td>
+							<td><Link to="/produkter" className="btn btn-warning"><i className="fa fa-angle-left"></i>Tilbake</Link></td>
 							<td colSpan="2" className="hidden-xs"></td>
 							<td className="hidden-xs text-center"><strong>Total {this.props.total} NOK</strong></td>
-							<td><div className="btn btn-success btn-block" style={{cursor: 'pointer'}}>Checkout <i className="fa fa-angle-right"></i></div></td>
+							<td><div className="btn btn-success btn-block" style={{cursor: 'pointer'}}>Kjøp <i className="fa fa-angle-right"></i></div></td>
 						</tr>
 					</tfoot>
         </table>
