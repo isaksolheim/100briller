@@ -19,24 +19,3 @@ $colors: (
 .table>tbody>tr>td, .table>tfoot>tr>td{
     vertical-align: middle;
 }
-
-/*
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-.container {
-  font-family: 'Karla', sans-serif;
-  position: relative;
-  min-height: 100vh;
-}
-
-@import './navbar';
-@import './browse';
-@import './productview';
-@import './footer';
-@import './cart';
-@import './home';
-@import './about';
-*/

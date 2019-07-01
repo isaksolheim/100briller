@@ -87,18 +87,6 @@ function cartReducer(state = initialState, action) {
           }
         }
 
-      case ADD_SHIPPING:
-        return{
-          ...state,
-          total: state.total + 50
-        }
-
-
-      case SUB_SHIPPING:
-        return{
-          ...state,
-          total: state.total - 50
-        }
       default:
         return state;
     }

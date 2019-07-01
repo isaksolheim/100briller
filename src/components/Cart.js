@@ -22,7 +22,7 @@ class Cart extends Component {
     let addedItems;
     if (this.props.items.length) {
       addedItems = (
-        this.props.items.map(item=>{
+        this.props.items.map(item => {
           return(
             <tbody key={item.id}>
 						<tr>
@@ -87,18 +87,19 @@ class Cart extends Component {
   }
 }
 
-
 const mapStateToProps = (state) => {
-  return{
+  return {
     items: state.addedItems,
     total: state.total
   }
 }
+
 const mapDispatchToProps = (dispatch) => {
   return{
-    removeItem: (id)=>{dispatch(removeItem(id))},
-    addQuantity: (id)=>{dispatch(addQuantity(id))},
-    subtractQuantity: (id)=>{dispatch(subtractQuantity(id))}
+    removeItem: (id) => { dispatch(removeItem(id)) },
+    addQuantity: (id) => { dispatch(addQuantity(id)) },
+    subtractQuantity: (id) => { dispatch(subtractQuantity(id)) }
   }
 }
+
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
